@@ -1,0 +1,95 @@
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+body
+{
+background-color: #21510c;
+}
+
+div .gallery
+{
+width: 100%;
+max-width: 950px;
+margin: auto;
+}
+
+div .gallery-image {
+  float: left;
+  width: 440px;
+  height: 440px;
+  margin: 20px;
+  border: 5px solid #21510c;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+a{
+  font-size: 15px;
+  text-decoration: none;
+}
+
+ div .gallery-image:nth-child(3n+1)
+{
+  background-image: url("/images/galleryimgs/IMG_0131.jpg");
+}
+ div .gallery-image:nth-child(3n+2)
+{
+  background-image: url("/images/galleryimgs/IMG_0079.jpg");
+}
+div .gallery-image:nth-child(3n+3)
+{
+  background-image: url("/images/galleryimgs/IMG_0031.jpg");
+}
+div .gallery-image:nth-child(3n+4)
+{
+  background-image: url("/images/galleryimgs/IMG_0135.jpg");
+}
+div .gallery-image:nth-child(3n+5)
+{
+  background-image: url("/images/galleryimgs/IMG_0010.jpg");
+}
+ div .gallery-image:nth-child(3n+6)
+{
+  background-image: url("/images/galleryimgs/image6.jpg");
+}
+ div .gallery-image:nth-child(3n+7)
+{
+  background-image: url("/images/galleryimgs/image7.jpg");
+}
+div .gallery-image:nth-child(3n+8)
+{
+  background-image: url("/images/galleryimgs/IMG_0267.jpg");
+}
+ div .gallery-image:nth-child(3n+9)
+{
+  background-image: url("/images/galleryimgs/image9.jpg");
+}
+ div .gallery-image:nth-child(3n+10)
+{
+  background-image: url("/images/galleryimgs/image10.jpg");
+}
+ div .gallery-image:nth-child(3n+11)
+{
+  background-image: url("/images/galleryimgs/image11.jpg");
+}
+
+@media all and (max-width: 1020px) {
+div .gallery-image {
+    float: none;
+    margin: 10px auto;
+  }
+}
+
+@media all and (max-width: 500px) {
+div .gallery-image {
+    border: none;
+
+    width: 100vw;
+    height: 100vw;
+  }
+
+
+
+}
