@@ -23,6 +23,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -48,24 +49,81 @@ table
 	border-spacing: 0;
 }
 /*from here starts my editing after the reset*/
+*, *:after, *:before {
+  box-sizing: border-box;
+}
 
-body
+/*************
+****TEMPLATE******
+*************/
+html, body {
+	min-height: 100%;
+}
+
+.header {
+	width: 100%;
+	position: fixed;
+}
+
+.header-container-nav {
+	overflow: hidden;
+	background-color: #000;
+	list-style-type: none;
+	margin-top: 0;
+	border-top: 0;
+	padding: 20px 20px 20px 20px;
+}
+
+
+.header-container-nav-logo {
+	text-decoration: none;
+	margin-right: 20px;
+	float: right;
+	color: white;
+}
+
+
+.header-container-nav li a {
+	font-family: 'Raleway', sans-serif;
+	color: #DDD;
+	text-decoration: none;
+	float: left;
+	font-size: 12px;
+	margin-right: 25px;
+	text-transform: uppercase;
+}
+
+footer {
+	background-color: #CCC;
+	height: 25px;
+	width: 100%;
+	text-align: left;
+	font-size: 13px;
+	color: #000;
+}
+
+/* ***
+****HOME PAGE****
+*** */
+
+/*body
 {
   background-color: #4ba089;
 } /*google css color picker*/
 
 
-
-h1 {
+.home-page-welcome {
+	padding-top: 70px;
+	clear: both;
   font-style: italic;
   text-align: center;
   font-size: 40px;
   color: blue;
 }
+
 p{
   display: block;
   font-size: 24px;
-  font-style: times;
   text-align: justify;
   padding: 40px 15px 15px 15px;
 }
@@ -73,15 +131,13 @@ p{
 img{
   width: 500px
 }
+
 .img1, .img2{
   float: right;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 10px;
+  padding: 10px 10px 10px 10px;
 }
 
-a{
+.home-page-link {
 	text-decoration: none;
 }
 
@@ -93,14 +149,108 @@ button {
 
 /* I like how this looks but it's not what I wanted to do (the img) */
 
-h2{
+.home-page-h2 {
   color: red;
-  font-style: times;
+  font-style: normal;
   font-size: 24px;
   padding-top: 40px;
 }
-h3{
+
+.home-page-h3{
   font-size: 24px;
-  font-style: times;
+  font-style: normal;
   padding-top: 30px;
+}
+
+
+/******************
+****GALLERY CSS****
+******************/
+
+
+/*body
+{
+background-color: #21510c;
+}*/
+
+div .gallery
+{
+width: 100%;
+max-width: 950px;
+margin: auto;
+}
+
+div .gallery-image {
+  float: left;
+  width: 440px;
+  height: 440px;
+  margin: 20px;
+  border: 1px solid #000;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+ div .gallery-image:nth-child(3n+1)
+{
+  background-image: url("/images/galleryimgs/image1.jpg");
+}
+ div .gallery-image:nth-child(3n+2)
+{
+  background-image: url("/images/galleryimgs/image2.jpg");
+}
+div .gallery-image:nth-child(3n+3)
+{
+  background-image: url("/images/galleryimgs/image3.jpg");
+}
+div .gallery-image:nth-child(3n+4)
+{
+  background-image: url("/images/galleryimgs/image4.jpg");
+}
+div .gallery-image:nth-child(3n+5)
+{
+  background-image: url("/images/galleryimgs/image5.jpg");
+}
+ div .gallery-image:nth-child(3n+6)
+{
+  background-image: url("/images/galleryimgs/image6.jpg");
+}
+ div .gallery-image:nth-child(3n+7)
+{
+  background-image: url("/images/galleryimgs/image7.jpg");
+}
+div .gallery-image:nth-child(3n+8)
+{
+  background-image: url("/images/galleryimgs/image8.jpg");
+}
+ div .gallery-image:nth-child(3n+9)
+{
+  background-image: url("/images/galleryimgs/image9.jpg");
+}
+ div .gallery-image:nth-child(3n+10)
+{
+  background-image: url("/images/galleryimgs/image10.jpg");
+}
+ div .gallery-image:nth-child(3n+11){
+  background-image: url("/images/galleryimgs/image11.jpg");
+}
+
+@media all and (max-width: 1020px) {
+div .gallery-image {
+    float: none;
+    margin: 10px auto;
+  }
+}
+
+@media all and (max-width: 500px) {
+div .gallery-image {
+    border: none;
+
+    width: 100vw;
+    height: 100vw;
+  }
+}
+
+.countries-info {
+	padding-top: 75px;
 }
