@@ -13,7 +13,6 @@ router.get("/", function(req, res) {
 
 
 router.get("/about", function(reg, res) {
-	console.log("Serving up homepage...");
 	res.render("template", {
 		page: "about",
 	  pageArg: null,
@@ -21,7 +20,6 @@ router.get("/about", function(reg, res) {
 });
 
 router.get("/contact", function(reg, res) {
-	console.log("Serving up homepage...");
 	res.render("template", {
 		page: "contact",
 	  pageArg: null,

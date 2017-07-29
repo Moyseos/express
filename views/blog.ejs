@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/style.css"/>
+	</head>
+
+	<body id=blog-body>
+		<table>
+			<% for (let i = 0; i < title.length; i++) { %>
+				<tr>
+					<td><%= title[i].id %></td>
+					<td><%= title[i].title %></td>
+					<td><%= title[i].article %></td>
+				</tr>
+			<% } %>
+		</table>
+	</body>
+</html>

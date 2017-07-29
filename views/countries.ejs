@@ -1,1 +1,10 @@
-<div class="countries-info"><%= JSON.stringify(country) %></div>
+
+<div class="countries-list">
+  <ul class="countries-list-ul">
+    <li class="countries-name">Country's Name: <%= country.name%></li>
+    <li class="countries-natName">Country's Native Name: <%= country.nativeName %></li>
+    <li class="countries-pop">Population: <%= country.population %></li>
+    <li class="countries-lreg">Region: <%= country.region %></li>
+    <li class="countries-flag"><%= country.flag %><img src=<%= country.flag %>/</li>
+  </ul>
+</div>

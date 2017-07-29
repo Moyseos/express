@@ -1,17 +1,21 @@
+require("dotenv").config();
 const express = require("express");
-const portfolioRouter = require("./router/portfolio");
+const sql = require("./util/sql");
+const aboutmeRouter = require("./router/aboutme");
 const countriesRouter = require("./router/countries");
 const galleryRouder = require("./router/gallery");
+const blogRouter = require("./router/blog");
 const app = express();
 
 
 
 app.set("view engine", "ejs");
 app.use(express.static("assets"));
-console.log(portfolioRouter);
-app.use("/", portfolioRouter);
+// console.log(aboutmeRouter);
+app.use("/", aboutmeRouter);
 app.use("/", countriesRouter);
 app.use("/", galleryRouder);
+app.use("/", blogRouter);
 
 
 
@@ -20,6 +24,10 @@ app.get("*", function(reg, res) {
 	res.send("This is not a valid page, Get out!");
 });
 
-app.listen(3000, function() {
-	console.log("Your server is available at localhost:3000!");
+sql.sync().then(function() {
+	console.log("Database initialized!");
+	const port = process.env.PORT || 3000;
+	app.listen(port, function() {
+		console.log("Your server is available at http://localhost:" + port);
+	});
 });
