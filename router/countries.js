@@ -14,8 +14,8 @@ router.get("/countries/:code", function(req, res) {
 
 
 	if (!countries[code]) {
-		res.status(400);
-		res.render("This is not a country!");
+		res.status(404);
+		res.render("400");
 		return;
 	}
 

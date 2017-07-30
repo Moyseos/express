@@ -201,4 +201,12 @@ div .gallery-image {
 
 .countries-list-ul li {
 	padding: 5px;
+	text-align: center;
+	font-size:20px;
+}
+
+.countries-name {
+	padding: 10px;
+	text-align: center;
+	font-size: 25px;
 }
