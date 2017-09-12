@@ -1,4 +1,4 @@
-const sql = require("./util/sql");
+const sql = require("../util/sql");
 const Sequelize = require("sequelize");
 
 module.exports = sql.define("post", {
@@ -12,7 +12,7 @@ module.exports = sql.define("post", {
 		notNull: true,
 	},
 	article: {
-		type: Sequelize.TEXT(5000),
+		type: Sequelize.STRING(5000),
 		notNull: true,
 	},
 });

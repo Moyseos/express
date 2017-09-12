@@ -12,14 +12,14 @@ router.get("/", function(req, res) {
 
 
 
-router.get("/about", function(reg, res) {
+router.get("/about", function(req, res) {
 	res.render("template", {
 		page: "about",
 	  pageArg: null,
 	});
 });
 
-router.get("/contact", function(reg, res) {
+router.get("/contact", function(req, res) {
 	res.render("template", {
 		page: "contact",
 	  pageArg: null,

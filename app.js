@@ -1,13 +1,15 @@
 require("dotenv").config();
 const express = require("express");
 const sql = require("./util/sql");
+const BodyParser = require('body-parser');
 const aboutmeRouter = require("./router/aboutme");
 const countriesRouter = require("./router/countries");
 const galleryRouder = require("./router/gallery");
 const blogRouter = require("./router/blog");
 const app = express();
 
-
+app.use(BodyParser.urlencoded({ extended: true }));
+app.use(BodyParser.json());
 
 app.set("view engine", "ejs");
 app.use(express.static("assets"));

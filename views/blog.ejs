@@ -1,9 +1,20 @@
-		<table>
-			<% for (let i = 0; i < title.length; i++) { %>
-				<tr>
-					<td><%= title[i].id %></td>
-					<td><%= title[i].title %></td>
-					<td><%= title[i].article %></td>
-				</tr>
-			<% } %>
-		</table>
+<div class="blog">
+		<h1  class="blog-header">Welcome to my Blog</h1>
+		<p class="blog-p">
+			Here is where you will find everything I have learned on my journey to becoming a web developer.
+		</p>
+			<div class="post">
+					<% for (let i = 0; i < posts.length; i++) { %>
+						<div class="post-content">
+								<h1 class="post-content-title">
+									<%= posts[i].title %>
+								</h1>
+								<p class="post-content-article">
+									<%= posts[i].article %>
+								</p>
+								
+						</div>
+						<% } %>
+				</div>
+</div>
+<div class="blog-foot"></div>
