@@ -3,7 +3,7 @@ const Sequelize = require("sequelize");
 let sql;
 
 if (process.env.DATABASE_URL) {
-	sql = new Sequelize(process.env.Database_URL);
+	sql = new Sequelize(process.env.DATABASE_URL);
 }
 
 else {
